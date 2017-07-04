@@ -70,23 +70,27 @@ public class FontActivity extends AppCompatActivity {
                 }
 
                 String edit_text = edit_font_size.getText().toString();
+
                 if (edit_text.matches(""))
-                    finish();
+                    saveIntent();
                 else if (Integer.parseInt(edit_text) < 80 || Integer.parseInt(edit_text) > 200)
                     Toast.makeText(getApplicationContext(), getResources().getString(R.string.font_size_toast), Toast.LENGTH_SHORT).show();
                 else {
                     font_size = Integer.parseInt(edit_text);
-                    finish();
+                    saveIntent();
                 }
-
-                Intent intent = new Intent();
-                intent.putExtra("font_path", font);
-                intent.putExtra("font_size", font_size);
-                intent.putExtra("counter", counter);
-                setResult(RESULT_OK, intent);
             }
         });
 
+    }
+
+    public void saveIntent(){
+        Intent intent = new Intent();
+        intent.putExtra("font_path", font);
+        intent.putExtra("font_size", font_size);
+        intent.putExtra("counter", counter);
+        setResult(RESULT_OK, intent);
+        finish();
     }
 
     public void setFonts() {
