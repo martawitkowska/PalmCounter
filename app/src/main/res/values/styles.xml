@@ -8,4 +8,8 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="AndalusTextViewStyle" parent="android:Widget.TextView">
+        <item name="android:fontFamily"></item>
+    </style>
+
 </resources>

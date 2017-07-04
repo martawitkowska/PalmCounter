@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">Palm counter</string>
+
+    <string name="button_text">Accept and return</string>
+    <string name="choose">Choode font:</string>
+    <string name="type">Type font size:</string>
+
+    <string name="font_size_toast">Type font sizes between\n80 sp and 200 sp</string>
+
+
 </resources>
